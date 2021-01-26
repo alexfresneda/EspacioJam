@@ -5,18 +5,18 @@ function ArticleCardItem(props) {
   return (
     <div>
       <li className="cards__item">
-        <Link className="cards__item__link" to={`${props.id}`}>
+        <Link className="cards__item__link" to={`${props.topic}/articulo/${props.sysId}`}>
           <div className="articlecards__item__overline">
             
             <img
-              src={props.author.image}
+              src={props.authorImage}
               alt="Antonio"
               className="articlecards__item__image"
             />
             
             <div className="cards__item__info">
-              <p className="cards__item__number">{props.author.name}</p>
-              <p className="cards__item__date">{props.date}</p>
+              <p className="cards__item__number">{props.author}</p>
+              <p className="cards__item__date">{props.date.substring(0,10)}</p>
             </div>
             
           </div>

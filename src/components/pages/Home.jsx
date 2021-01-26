@@ -7,7 +7,9 @@ import HeroSection from "../HeroSection";
 function Home() {
   return (
     <>
-      <HeroSection />
+      <HeroSection 
+        title="Espacio Jam"
+        description="Bienvenido a Espacio Jam!"/>
       <Cards />
       <Footer />
     </>

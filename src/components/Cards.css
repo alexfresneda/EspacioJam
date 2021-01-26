@@ -72,6 +72,7 @@
   height: 38px;
   width: 38px;
   border-radius: 19px;
+  object-fit: cover;
 }
 
 .play-icon {
@@ -119,6 +120,14 @@
   
 }
 
+/* video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+} */
+
 @media only screen and (min-width: 1200px) {
   .content__blog__container {
     width: 84%;
@@ -140,8 +149,13 @@
 
 @media only screen and (max-width: 960px) {
   .cards__container {
+    flex-direction: column;
     padding: 1rem;
     width: 100vw;
     margin: 0;
+  }
+  
+  .cards__items {
+    width: 100%;
   }
 }

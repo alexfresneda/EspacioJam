@@ -3,12 +3,12 @@ import "../App.css";
 import { Button } from "./Button";
 import "./HeroSection.css";
 
-function HeroSection() {
+function HeroSection(props) {
   return (
     <div className="hero-container">
-      {/* <video src="/videos/video-1.mp4" autoPlay loop muted /> */}
-      <h1>Espacio Jam</h1>
-      <p>Bienvenido a Espacio Jam!</p>
+      <video src={props.video} autoPlay loop muted />
+      <h1>{props.title}</h1>
+      <p>{props.description}</p>
       {/* <div className="hero-btns">
         <Button
           className="btns"
