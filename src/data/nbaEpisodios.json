@@ -1,12 +1,13 @@
 [
     {
-      "type": "baloncesto",
-      "id": "001",
+      "topic": "baloncesto",
+      "id": "1",
       "title": "Raul Moreno (Unlimited Management), Liga Femenina, AfroBasket y NBA",
       "slug": "eb001",
       "heroImage": "image",
       "publishDate": "14/01/2021",
       "description": "Charlamos con Raul Moreno sobre su agencia de jugadores antes de pasar a hablar de Liga Femenina, el AfroBasket y la conferencia Este de la NBA.",
       "url": ""
+      
     }
 ]

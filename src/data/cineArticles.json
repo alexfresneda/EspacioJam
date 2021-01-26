@@ -1,27 +1,27 @@
 [
     {
-      "type": "cine",
-      "id": "001",
+      "topic": "cine",
+      "id": "1",
       "title": "Space Jam",
       "author": {
         "name": "Antonio Vicent",
         "image": "images/Antonio.png"
       },
-      "slug": "ac001",
+      "slug": "1",
       "heroImage": "image",
       "publishDate": "14/01/2021",
       "description": "Space Jam es una película estadounidense estrenada en 1996 que combina acción real y dibujos animados. Fue protagonizada por el jugador de baloncesto Michael Jordan y por los dibujos animados de la Warner Bros., los Looney Tunes.",
       "body": "Space Jam es una película estadounidense estrenada en 1996 que combina acción real y dibujos animados. Fue protagonizada por el jugador de baloncesto Michael Jordan y por los dibujos animados de la Warner Bros., los Looney Tunes. Space Jam es una película estadounidense estrenada en 1996 que combina acción real y dibujos animados. Fue protagonizada por el jugador de baloncesto Michael Jordan y por los dibujos animados de la Warner Bros., los Looney Tunes. Space Jam es una película estadounidense estrenada en 1996 que combina acción real y dibujos animados. Fue protagonizada por el jugador de baloncesto Michael Jordan y por los dibujos animados de la Warner Bros., los Looney Tunes."
     },
     {
-      "type": "cine",
-      "id": "002",
+      "topic": "cine",
+      "id": "2",
       "title": "Space Jam",
       "author": {
         "name": "Guillermo Garcia",
         "image": "images/Antonio.png"
       },
-      "slug": "ac002",
+      "slug": "2",
       "heroImage": "image",
       "publishDate": "14/01/2021",
       "description": "Space Jam es una película estadounidense estrenada en 1996 que combina acción real y dibujos animados. Fue protagonizada por el jugador de baloncesto Michael Jordan y por los dibujos animados de la Warner Bros., los Looney Tunes.",

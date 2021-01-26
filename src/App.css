@@ -1,5 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap'); */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,6 +14,7 @@
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  font-weight: 400;
 }
 
 .cine {
@@ -46,5 +45,13 @@
   background-repeat: no-repeat;
   color: #000;
   font-size: 100px;
+}
+
+.loading__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
