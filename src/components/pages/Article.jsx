@@ -19,6 +19,7 @@ const query = `
       topic
       description
       body
+      favourite
       sys {
         id
       }
@@ -63,7 +64,7 @@ function Article({ match }) {
     return (
       <div className="loading__container">
         <img
-          src="images/LogoBlack.png"
+          src="/images/LogoBlack.png"
           alt="Cargando..."
           className=""
         />

@@ -13,6 +13,7 @@ const query = `
       description
       id
       link
+      favourite
       sys {
         id
       }
@@ -58,7 +59,7 @@ function Episode({ match }) {
     return (
       <div className="loading__container">
         <img
-          src="images/LogoBlack.png"
+          src="/images/LogoBlack.png"
           alt="Cargando..."
           className=""
         />
@@ -81,7 +82,7 @@ function Episode({ match }) {
                       <div className="cards__item__info">
                         <p className="cards__item__number">#{episode.id}</p>
                         <p className="cards__item__date">
-                          {episode.publishDate.substring(0,10)}
+                          {episode.publishDate.substring(0, 10)}
                         </p>
                       </div>
                     </div>
@@ -92,12 +93,13 @@ function Episode({ match }) {
                   <div className="article__body">
                     <p>{episode.description}</p>
                   </div>
+
                   <iframe
-                    width="100%"
-                    height="200"
                     frameborder="0"
                     allowfullscreen=""
                     scrolling="no"
+                    height="200"
+                    width="100%"
                     src={episode.link}
                   ></iframe>
                 </div>
