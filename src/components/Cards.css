@@ -158,4 +158,8 @@
   .cards__items {
     width: 100%;
   }
+
+  .section__title {
+    font-size: 32px;
+  }
 }

@@ -24,6 +24,7 @@ const query = `
       publishDate
       topic
       description
+      favourite
       sys {
         id
       }
@@ -37,6 +38,7 @@ const query = `
       description
       id
       link
+      favourite
       sys {
         id
       }

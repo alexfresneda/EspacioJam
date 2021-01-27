@@ -15,6 +15,7 @@ const query = `
       description
       id
       link
+      favourite
       sys {
         id
       }
