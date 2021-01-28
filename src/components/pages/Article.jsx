@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link, BrowserRouter as Router, Route } from "react-router-dom";
 import "../../App.css";
 import "./Article.css";
+import ReactMarkdown from "react-markdown";
+import Footer from "../Footer";
 
 const query = `
 {
@@ -105,14 +106,15 @@ function Article({ match }) {
                       <h1 className="cards__item__title">{article.title}</h1>
                     </div>
                   </div>
-                  <div className="article__body">
-                    <p>{article.body}</p>
-                  </div>
+                  <span className="article__body" >
+                    <ReactMarkdown source={article.body} />
+                  </span>
                 </div>
               </div>
             );
           })}
       </>
+      <Footer />
     </>
   );
 }

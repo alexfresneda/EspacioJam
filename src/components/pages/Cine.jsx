@@ -2,12 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import CardItem from "../CardItem";
 import ArticleCardItem from "../ArticleCardItem";
-import CineArticles from "../../data/cineArticles.json";
-import CineEpisodios from "../../data/cineEpisodios.json";
 import "../Cards.css";
 import "../../App.css";
 import "../HeroSection.css";
 import HeroSection from "../HeroSection";
+import Footer from "../Footer";
 
 const query = `
 {
@@ -148,6 +147,7 @@ function Cine() {
             })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

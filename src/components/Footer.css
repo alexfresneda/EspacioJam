@@ -116,7 +116,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 240px;
+    width: 180px;
 }
 
 .social-logo {
@@ -134,9 +134,10 @@
 
 .website-rights {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 200;
     color: #ffffff;
     margin-bottom: 16px;
+    font-family: "Oswald", sans-serif;
 }
 
 @media screen and (max-width: 820px) {

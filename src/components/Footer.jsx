@@ -29,38 +29,38 @@ function Footer() {
         <div className="social-media-wrap">
           <small className="website-rights">© Espacio Jam 2021</small>
           <div className="social-icons">
-            <Link
+            <a
               className="social-icon-link spotify"
-              to="/"
+              href="https://open.spotify.com/show/5Q6EbrrYjMqqR5dyWKMRr4?si=Mqv11wWMT7SeDGL-bdXwYA&nd=1"
               target="_blank"
               aria-label="Spotify"
             >
               <i className="fab fa-spotify"></i>
-            </Link>
-            <Link
+            </a>
+            <a
               className="social-icon-link instagram"
-              to="/"
+              href="https://www.instagram.com/espacio_jam/"
               target="_blank"
               aria-label="Instagram"
             >
               <i className="fab fa-instagram"></i>
-            </Link>
-            <Link
+            </a>
+            {/* <Link
               className="social-icon-link rss"
               to="/"
               target="_blank"
               aria-label="RSS"
             >
               <i className="fas fa-rss"></i>
-            </Link>
-            <Link
+            </Link> */}
+            <a
               className="social-icon-link twitter"
-              to="/"
+              href="https://twitter.com/EspacioJam"
               target="_blank"
               aria-label="Twitter"
             >
               <i className="fab fa-twitter"></i>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

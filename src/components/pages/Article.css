@@ -6,6 +6,7 @@
   width: 80vw;
   max-width: 800px;
   margin: 0 auto;
+  margin-bottom: 10vh;
 }
 
 .articlecards__item__overline {
@@ -63,11 +64,27 @@
   padding-bottom: 30px;
 }
 
+.article__body > image {
+  width: 80vw;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 50vh;
+  object-fit: cover;
+}
+
 .article__body > p {
   color: rgba(0, 0, 0, 0.87);
   font-size: 24px;
   line-height: 32px;
   font-weight: 400;
+}
+
+.article__body > h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  line-height: 56px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .article__header {
@@ -95,6 +112,11 @@
   .cards__item__info > h1 {
     font-size: 40px;
     line-height: 52px;
+  }
+
+  .article__body > h2 {
+    font-size: 32px;
+    line-height: 48px;
   }
 
   .article__text {

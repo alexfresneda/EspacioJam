@@ -1,6 +1,5 @@
 import React from "react";
-import { BrowserRouter, Link, Route, Switch} from "react-router-dom";
-import Article from "./pages/Article";
+import { Link } from "react-router-dom";
 
 function CardItem(props) {
   return (

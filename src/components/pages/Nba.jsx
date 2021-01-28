@@ -2,12 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import CardItem from "../CardItem";
 import ArticleCardItem from "../ArticleCardItem";
-import NbaArticles from "../../data/nbaArticles.json";
-import NbaEpisodios from "../../data/nbaEpisodios.json";
 import "../Cards.css";
 import "../../App.css";
 import "../HeroSection.css";
 import HeroSection from "../HeroSection";
+import Footer from "../Footer";
 
 const query = `
 {
@@ -94,7 +93,7 @@ function Nba() {
   }
 
   return (
-    <div className="">
+    <div>
       <div className="hero-container">
         <HeroSection
           title="Baloncesto"
@@ -142,6 +141,7 @@ function Nba() {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
