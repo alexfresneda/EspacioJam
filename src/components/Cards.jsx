@@ -1,8 +1,6 @@
 import React from "react";
 import CardItem from "./CardItem";
 import { useState, useEffect } from "react";
-import NbaEpisodios from "../data/nbaEpisodios.json";
-import CineEpisodios from "../data/cineEpisodios.json";
 import "./Cards.css";
 
 const query = `

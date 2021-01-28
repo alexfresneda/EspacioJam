@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link, BrowserRouter as Router, Route } from "react-router-dom";
 import "../../App.css";
+// import Footer from "../Footer";
 import "./Article.css";
 
 const query = `
@@ -107,6 +107,7 @@ function Episode({ match }) {
             );
           })}
       </>
+      {/* <Footer /> */}
     </>
   );
 }
