@@ -64,10 +64,10 @@
   padding-bottom: 30px;
 }
 
-.article__body > image {
+.article__body img {
   width: 80vw;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   height: 50vh;
   object-fit: cover;
 }

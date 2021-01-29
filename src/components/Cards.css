@@ -20,6 +20,8 @@
 .cards__items {
   display: flex;
   flex-flow: column;
+  /* remove this line below (margin: 0 auto;) when we add articles */
+  margin: 0 auto; 
   width: 50%;
 }
 

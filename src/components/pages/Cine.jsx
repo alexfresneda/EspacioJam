@@ -102,8 +102,6 @@ function Cine() {
           description="Descripcion de cine"
           // video="/videos/cine.mp4"
         />
-        {/* <video src="/videos/baloncesto.mp4" autoPlay loop muted />
-        <h1 className="cine">Baloncesto</h1> */}
       </div>
       <div className="cards__container">
         <div className="cards__items">
@@ -125,7 +123,7 @@ function Cine() {
               );
             })}
         </div>
-        <div className="cards__items">
+        {/* <div className="cards__items">
           {article
             .filter((items) => items.topic === "cine")
             .map((article, key) => {
@@ -145,7 +143,7 @@ function Cine() {
                 </div>
               );
             })}
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>

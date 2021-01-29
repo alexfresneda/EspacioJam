@@ -121,7 +121,7 @@ function Nba() {
             );
           })}
         </div>
-        <div className="cards__items">
+        {/* <div className="cards__items">
           {article.filter(items => items.topic === "baloncesto").map((article, key) => {
             return (
               <div key={key}>
@@ -139,7 +139,7 @@ function Nba() {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>
