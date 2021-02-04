@@ -7,6 +7,8 @@ import "../../App.css";
 import "../HeroSection.css";
 import HeroSection from "../HeroSection";
 import Footer from "../Footer";
+import { Button } from "../Button";
+import "../Button.css";
 
 const query = `
 {
@@ -80,6 +82,24 @@ function Cine() {
       });
   }, []);
 
+  const [click, setClick] = useState(true);
+  const [button, setButton] = useState(true);
+
+  const handleClick = () => setClick(!click);
+  // const closeMobileMenu = () => setClick(false);
+
+  const showButton = () => {
+    if (window.innerWidth <= 760) {
+      setButton(true);
+    } else {
+      setButton(false);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
   // show a loading screen case the data hasn't arrived yet
   if (!article || !episode) {
     return (
@@ -94,60 +114,210 @@ function Cine() {
     );
   }
 
-  return (
-    <div>
-      <div className="hero-container">
+  window.addEventListener("resize", showButton);
+  if (window.matchMedia("(max-width: 760px)").matches) {
+    /* The viewport is less than, or equal to, 700 pixels wide */
+
+    return (
+      <div>
+        <div className="hero-container">
         <HeroSection
           title="Cine"
-          description="Descripcion de cine"
+          description="En la sección de cine, nos tiramos a la piscina (junto a nuestros atrevidos colaboradores) al analizar la carrera de grandes directores como David Fincher o estudios como Pixar película por película. También podréis disfrutar de episodios temáticos especiales, estrenos y charlas informales con profesionales del mundo del cine y las series."
           // video="/videos/cine.mp4"
         />
-      </div>
-      <div className="cards__container">
-        <div className="cards__items">
-          {episode
-            .filter((items) => items.topic === "cine")
-            .map((episode, key) => {
-              return (
-                <div key={key}>
-                  <CardItem
-                    topic={episode.topic}
-                    id={episode.id}
-                    date={episode.publishDate}
-                    title={episode.title}
-                    description={episode.description}
-                    path={episode.link}
-                    sysId={episode.sys.id}
-                  />
-                </div>
-              );
-            })}
         </div>
-        {/* <div className="cards__items">
-          {article
-            .filter((items) => items.topic === "cine")
-            .map((article, key) => {
-              return (
-                <div key={key}>
-                  <ArticleCardItem
-                    topic={article.topic}
-                    author={article.author}
-                    authorImage={article.authorImage.url}
-                    date={article.publishDate}
-                    title={article.title}
-                    description={article.description}
-                    heroImage={article.heroImage.url}
-                    id={article.id}
-                    sysId={article.sys.id}
-                  />
-                </div>
-              );
-            })}
-        </div> */}
+
+        <div className="button-wrapper">
+          {button && (
+            <Button buttonStyle={click ? "btn--primary" : "btn--outline"} onClick={handleClick}>
+              PROGRAMAS
+            </Button>
+          )}
+          {button && (
+            <Button buttonStyle={!click ? "btn--primary" : "btn--outline"} onClick={handleClick}>
+              ARTÍCULOS
+            </Button>
+          )}
+        </div>
+        <div className="cards__container">
+          <div className="cards__items">
+            {episode
+              .filter((items) => items.topic === "cine")
+              .map((episode, key) => {
+                if (click) {
+                  return (
+                    <div key={key}>
+                      <CardItem
+                        topic={episode.topic}
+                        id={episode.id}
+                        date={episode.publishDate}
+                        title={episode.title}
+                        description={episode.description}
+                        path={episode.link}
+                        sysId={episode.sys.id}
+                      />
+                    </div>
+                  );
+                }
+              })}
+          </div>
+          <div className="cards__items">
+            {article
+              .filter((items) => items.topic === "cine")
+              .map((article, key) => {
+                if (!click) {
+                  return (
+                    <div key={key}>
+                      <ArticleCardItem
+                        topic={article.topic}
+                        author={article.author}
+                        authorImage={article.authorImage.url}
+                        date={article.publishDate}
+                        title={article.title}
+                        description={article.description}
+                        heroImage={article.heroImage.url}
+                        id={article.id}
+                        sysId={article.sys.id}
+                      />
+                    </div>
+                  );
+                }
+              })}
+          </div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  } else {
+    /* The viewport is greater than 768 pixels wide */
+    return (
+      <div>
+        <div className="hero-container">
+          <HeroSection
+            title="Cine"
+            description="En la sección de cine, nos tiramos a la piscina (junto a nuestros atrevidos colaboradores) al analizar la carrera de grandes directores como David Fincher o estudios como Pixar película por película. También podréis disfrutar de episodios temáticos especiales, estrenos y charlas informales con profesionales del mundo del cine y las series."
+            // video="/videos/baloncesto2.mp4"
+          />
+        </div>
+
+        <div className="cards__container">
+          <div className="cards__items">
+            {episode
+              .filter((items) => items.topic === "cine")
+              .map((episode, key) => {
+                return (
+                  <div key={key}>
+                    <CardItem
+                      topic={episode.topic}
+                      id={episode.id}
+                      date={episode.publishDate}
+                      title={episode.title}
+                      description={episode.description}
+                      path={episode.link}
+                      sysId={episode.sys.id}
+                    />
+                  </div>
+                );
+              })}
+          </div>
+          <div className="cards__items">
+            {article
+              .filter((items) => items.topic === "cine")
+              .map((article, key) => {
+                return (
+                  <div key={key}>
+                    <ArticleCardItem
+                      topic={article.topic}
+                      author={article.author}
+                      authorImage={article.authorImage.url}
+                      date={article.publishDate}
+                      title={article.title}
+                      description={article.description}
+                      heroImage={article.heroImage.url}
+                      id={article.id}
+                      sysId={article.sys.id}
+                    />
+                  </div>
+                );
+              })}
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // return (
+  //   <div>
+  //     <div className="hero-container">
+  //       <HeroSection
+  //         title="Cine"
+  //         description="En la sección de cine, nos tiramos a la piscina (junto a nuestros atrevidos colaboradores) al analizar la carrera de grandes directores como David Fincher o estudios como Pixar película por película. También podréis disfrutar de episodios temáticos especiales, estrenos y charlas informales con profesionales del mundo del cine y las series."
+  //         // video="/videos/cine.mp4"
+  //       />
+  //     </div>
+  //     <div className="cards__container">
+  //       <div className="cards__items">
+  //         {episode
+  //           .filter((items) => items.topic === "cine")
+  //           .map((episode, key) => {
+  //             return (
+  //               <div key={key}>
+  //                 <CardItem
+  //                   topic={episode.topic}
+  //                   id={episode.id}
+  //                   date={episode.publishDate}
+  //                   title={episode.title}
+  //                   description={episode.description}
+  //                   path={episode.link}
+  //                   sysId={episode.sys.id}
+  //                 />
+  //               </div>
+  //             );
+  //           })}
+  //       </div>
+  //       {/* <div className="cards__items">
+  //         {article
+  //           .filter((items) => items.topic === "cine")
+  //           .map((article, key) => {
+  //             return (
+  //               <div key={key}>
+  //                 <ArticleCardItem
+  //                   topic={article.topic}
+  //                   author={article.author}
+  //                   authorImage={article.authorImage.url}
+  //                   date={article.publishDate}
+  //                   title={article.title}
+  //                   description={article.description}
+  //                   heroImage={article.heroImage.url}
+  //                   id={article.id}
+  //                   sysId={article.sys.id}
+  //                 />
+  //               </div>
+  //             );
+  //           })}
+  //       </div> */}
+  //     </div>
+  //     <Footer />
+  //   </div>
+  // );
 }
+
+
+
+
 
 export default Cine;
