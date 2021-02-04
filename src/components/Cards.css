@@ -20,6 +20,8 @@
 .cards__items {
   display: flex;
   flex-flow: column;
+  /* remove this line below (margin: 0 auto;) when we add articles */
+  margin: 0 auto; 
   width: 50%;
 }
 
@@ -121,13 +123,12 @@
   
 }
 
-/* video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
-} */
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
 
 @media only screen and (min-width: 1200px) {
   .content__blog__container {
@@ -150,8 +151,20 @@
 
 @media only screen and (max-width: 960px) {
   .cards__container {
-    flex-direction: column;
     padding: 1rem;
+    width: 100vw;
+
+  }
+  
+  .section__title {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .cards__container {
+    flex-direction: column;
+    padding: 0.5rem;
     width: 100vw;
     margin: 0;
   }
@@ -164,3 +177,4 @@
     font-size: 32px;
   }
 }
+
